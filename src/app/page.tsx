@@ -15,6 +15,7 @@ export default function Index() {
     <main>
 <div>
   FUCCK U
+  <img src="/assets/blog/preview/cover.jpg" alt="sd"/>
 </div>
     </main>
   );
