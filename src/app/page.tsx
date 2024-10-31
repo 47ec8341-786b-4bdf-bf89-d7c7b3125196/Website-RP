@@ -7,16 +7,19 @@ import { getAllPosts } from "@/lib/api";
 export default function Index() {
   const allPosts = getAllPosts();
 
-  const heroPost = allPosts[0];
+  const config = require("../../next.config.js");
 
+  const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
+
+  const basePath = config.basePath || "";
 
   return (
     <main>
-<div>
-  FUCCK U
-  <img src="/assets/blog/preview/cover.jpg" alt="sd"/>
-</div>
+      <div>
+        <p>Example Content</p>
+        <img src={`${basePath}/assets/blog/preview/cover.jpg`} alt="cover" />
+      </div>
     </main>
   );
 }
